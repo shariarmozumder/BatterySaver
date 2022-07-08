@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linee"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/txtBatteryInfo"
+        android:layout_width="fill_parent"
+        android:textSize="15dp"
+        android:background="@drawable/rounded_corner"
+        android:lineSpacingExtra="2dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:textSize="15dp"
+        android:background="@drawable/rounded_corner"
+        android:lineSpacingExtra="2dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:typeface="normal"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:textSize="15dp"
+        android:background="@drawable/rounded_corner"
+        android:lineSpacingExtra="2dp"
+        android:typeface="normal"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="fill_parent"
+        android:textSize="15dp"
+        android:typeface="normal"
+        android:background="@drawable/rounded_corner"
+        android:lineSpacingExtra="2dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="fill_parent"
+        android:textSize="15dp"
+        android:typeface="normal"
+        android:background="@drawable/rounded_corner"
+        android:lineSpacingExtra="2dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="fill_parent"
+        android:textSize="15dp"
+        android:typeface="normal"
+        android:background="@drawable/rounded_corner"
+        android:lineSpacingExtra="2dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="fill_parent"
+        android:textSize="15dp"
+        android:typeface="normal"
+        android:background="@drawable/rounded_corner"
+        android:lineSpacingExtra="2dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.44" >
+
+        <com.startapp.android.publish.banner.Banner
+            android:id="@+id/startAppBanner1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" >
+
+        </com.startapp.android.publish.banner.Banner>
+
+    </RelativeLayout>
+
+</LinearLayout>

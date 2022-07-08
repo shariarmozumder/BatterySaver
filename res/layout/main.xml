@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@id/adviewLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@id/listbody"
+        android:layout_width="fill_parent"
+        android:layout_height="372dp"
+        android:layout_alignWithParentIfMissing="true"
+        
+        android:scrollbars="vertical" />
+<com.startapp.android.publish.banner.Banner
+        android:id="@+id/startAppBanner1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+<LinearLayout
+    android:id="@id/main_title_layer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/startAppBanner1"
+    android:layout_alignParentLeft="true"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@id/btn_task"
+        android:layout_width="250dp"
+        android:layout_height="60dip"
+        android:layout_above="@+id/startAppBanner1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btton"
+        android:padding="0.0dip"
+        android:text="Task Killer"
+        android:textSize="19.0dip"
+        android:textStyle="bold"
+        android:typeface="serif" />
+</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="5" android:versionName="5.1.11" package="com.batterysaverplus">
+
+    <uses-sdk android:minSdkVersion="9"/>
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>	
+	<uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>    
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.BLUETOOTH"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>  	
+  	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+  	<uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+   
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:screenOrientation="portrait">
+        <receiver android:name="com.batterysaverplus.MyScheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_BATTERY_LOW"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+    			<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/app_name" android:name="com.batterysaverplus.BatteryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        
+        <service android:label="MyBatteryReceiver" android:name="com.batterysaverplus.Updateservices">
+        <intent-filter>
+            <action android:name="android.intent.action.BATTERY_CHANGED"/>
+        </intent-filter>
+    </service>
+         <activity android:label="@string/app_system" android:name="com.batterysaverplus.BatterySaverActivity" android:screenOrientation="portrait">
+        <intent-filter>
+           <action android:name="android.settings.AIRPLANE_MODE_SETTINGS"/>
+           <category android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+            </activity>
+            
+        <activity android:label="@string/app_charger" android:name="com.batterysaverplus.ChargerActivity" android:screenOrientation="portrait"> 
+        </activity>
+        
+        <activity android:label="@string/app_details" android:name="com.batterysaverplus.DetailsActivity" android:screenOrientation="portrait"> 
+        </activity>
+            
+            <activity android:label="@string/app_about" android:name="com.batterysaverplus.AboutActivity" android:screenOrientation="portrait"> 
+            </activity> 
+              
+             <service android:name="com.batterysaverplus.Servicess">
+             </service>
+       
+            <activity android:configChanges="keyboardHidden|orientation" android:icon="@drawable/icon2" android:label="@string/app_task" android:launchMode="singleTask" android:name="com.batterysaverplus.AdvancedTaskKiller" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.batterysaverplus.IgnoreListActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.rechild.advancedtaskkillerpro.intent.action.IgnoreList"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.batterysaverplus.NewSettings" android:screenOrientation="portrait"/>
+         <receiver android:name="com.batterysaverplus.AutoStartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver> 
+
+          	<service android:name="com.batterysaverplus.BackService">
+            </service>
+ 
+          <receiver android:icon="@drawable/battery_widget_icon" android:label="BatterySaverPlus Widget" android:name="com.batterysaverplus.AndroidBatteryWidgetProvider" android:screenOrientation="portrait">
+            
+             <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter> 
+
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/androidbatterywidgetproviderinfo"/>
+        </receiver>
+        
+         <service android:name="com.batterysaverplus.AndroidBatteryWidgetProvider$UpdateService"/> 
+        <receiver android:name="com.batterysaverplus.AlarmReceiver"/>  
+        
+        <activity android:name="org.achartengine.GraphicalActivity" android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name="com.startapp.android.publish.list3d.List3DActivity" android:theme="@android:style/Theme"/>
+        <activity android:configChanges="orientation|keyboardHidden" android:name="com.startapp.android.publish.AppWallActivity" android:theme="@android:style/Theme.Translucent"/>
+        
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:name="com.google.android.gms.ads.AdActivity"/>
+    
+       </application>
+    
+<supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+   
+
+</manifest>

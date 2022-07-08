@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circle="http://schemas.android.com/apk/res/com.batterysaverplus"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BatteryActivity" >
+
+    <com.batterysaverplus.view.CircleLayout
+        android:id="@+id/main_circle_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/main_selected_textView"
+        android:layout_gravity="center_horizontal"
+        circle:firstChildPosition="South" 
+        circle:rotateToCenter="true" 
+        circle:isRotating="true"
+        circle:speed="75" >       
+<!--         circle:circleBackground="@drawable/green"  > -->
+
+
+        <com.batterysaverplus.view.CircleImageView
+            android:id="@+id/main_battery"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/icon_battery"
+            circle:name="@string/batteryactivity" />
+
+        <com.batterysaverplus.view.CircleImageView
+            android:id="@+id/main_charger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_charge"
+            circle:name="@string/charger" />
+
+        <com.batterysaverplus.view.CircleImageView
+            android:id="@+id/main_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_details"
+            circle:name="@string/datails" />
+
+        <com.batterysaverplus.view.CircleImageView
+            android:id="@+id/main_graph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_graph"
+            circle:name="@string/graph" />
+
+        <com.batterysaverplus.view.CircleImageView
+            android:id="@+id/main_taskiller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_task"
+            circle:name="@string/taskkiller" />
+
+    </com.batterysaverplus.view.CircleLayout>
+
+    <TextView
+        android:id="@+id/main_selected_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        style="@style/AudioFileInfoOverlayTextes"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
